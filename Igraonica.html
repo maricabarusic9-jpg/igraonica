@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Marica B">
+  <title>Moj kutak – igre, priče, crtanje i učenje</title>
+  <link rel="stylesheet" href="Igraonica.css">
+  <script src="Igraonica.js" defer></script>
+</head>
+<body>
+  <a class="preskoci" href="#glavniSadrzaj">Preskoči na glavni sadržaj</a>
+  <nav aria-label="Glavna navigacija">
+    <a class="logo" href="#pocetak" aria-label="Moj kutak, početna stranica"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="logoKrivuljaZaglavlje" d="M 15 59 C 25 10, 75 10, 85 59"></path></defs><circle cx="50" cy="50" r="47" fill="thistle" stroke="goldenrod" stroke-width="3"></circle><text fill="midnightblue" font-size="9" font-weight="700" letter-spacing="1"><textPath href="#logoKrivuljaZaglavlje" startOffset="50%" text-anchor="middle">MOJ KUTAK</textPath></text><path d="M50 39 C40 39 38 48 41 56 C43 62 47 65 50 67 C53 65 57 62 59 56 C62 48 60 39 50 39Z" fill="mediumorchid" stroke="darkmagenta" stroke-width="2"></path><path d="M50 67 L47 72 L53 72 Z M50 72 C47 78 55 79 50 86" fill="none" stroke="darkmagenta" stroke-width="2" stroke-linecap="round"></path><path d="M45 48 C48 43 53 43 56 48" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"></path></svg></a>
+    <div class="nav-links">
+      <div class="pristup-postavke" role="group" aria-label="Postavke prikaza">
+        <span>Prilagodi prikaz:</span>
+        <button type="button" data-velicina="-1" aria-label="Smanji tekst">A−</button>
+        <button type="button" data-velicina="1" aria-label="Povećaj tekst">A+</button>
+        <button type="button" id="razmakToggle" aria-pressed="false">Veći razmak</button>
+        <button type="button" id="kontrastToggle" aria-pressed="false">Visoki kontrast</button>
+        <button type="button" id="prikazReset">Vrati početni prikaz</button>
+        <span id="pristupPoruka" class="sr-only" aria-live="polite"></span>
+      </div>
+      <div class="pozdrav-prijava" role="group" aria-label="Pozdrav i prijava">
+        <span id="korisnikPozdrav" class="korisnik-pozdrav" aria-live="polite">Pozdrav!</span>
+        <a href="#profil">Prijava</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="pocetak" tabindex="-1">
+    <h1>Moj kutak – igraj, čitaj, piši, crtaj, uči 🌈</h1>
+  </header>
+  <section class="odjeljak predstavljanje" aria-labelledby="naslovPredstavljanje">
+    <div class="naslov-odjeljka"><span aria-hidden="true">✨</span><div><h2 id="naslovPredstavljanje">Motivacijske rečenice</h2><p>Rečenica se sama promijeni jednom u 24 sata. Strelicama je možeš listati i kad god želiš.</p></div></div>
+    <div class="slider" id="predstavljanje" aria-roledescription="klizač" aria-label="30 motivacijskih rečenica">
+      <div class="slider-traka" id="predstavljanjeTraka" aria-live="polite">
+        <article class="slider-slajd" ><span aria-hidden="true">🌱</span><p>Svaki veliki korak počinje malim pokušajem.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">⭐</span><p>Tvoj trud vrijedi, čak i kad rezultat još ne vidiš.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🧩</span><p>Pogreška je trag koji ti pomaže pronaći rješenje.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🌈</span><p>Danas možeš naučiti nešto što jučer još nisi znao.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">💪</span><p>Ne moraš sve odmah; pokušaj korak po korak.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">📚</span><p>Svako pitanje otvara vrata novom znanju.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🦋</span><p>Promjena počinje kad sebi daš priliku pokušati.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">☀️</span><p>I mali napredak razlog je za ponos.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🎨</span><p>Tvoje ideje imaju svoje posebno mjesto.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🛠️</span><p>Vježbom ono teško postaje lakše.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🌻</span><p>Budi strpljiv prema sebi dok učiš.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🚀</span><p>Smjela ideja može te odvesti daleko.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">💡</span><p>Kad zastaneš, udahni i pokušaj na novi način.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🤝</span><p>Zajedno možemo pronaći više dobrih rješenja.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🏆</span><p>Ponos dolazi iz truda, ne samo iz pobjede.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🐢</span><p>Polako i uporno također znači naprijed.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🎯</span><p>Usredotoči se na jedan sljedeći korak.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🌟</span><p>Imaš pravo učiti svojim tempom.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">📝</span><p>Zapiši ideju; možda je početak nečeg sjajnog.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🌼</span><p>Ljubazna riječ može uljepšati nečiji dan.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🔍</span><p>Radoznalost ti pomaže otkriti nove stvari.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🧠</span><p>Tvoj mozak jača svaki put kad nešto vježbaš.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🎉</span><p>Proslavi male uspjehe, i oni su važni.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🌤️</span><p>Nakon teškog trenutka dolazi vedriji dan.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🪄</span><p>Mašta je početak mnogih dobrih izuma.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">💬</span><p>Tvoje mišljenje vrijedi i zaslužuje da ga izraziš.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🧭</span><p>Ne moraš znati cijeli put; dovoljno je krenuti.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🫶</span><p>Pomoć možeš zatražiti kad god ti zatreba.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">🌺</span><p>Budi ponosan na ono što danas možeš.</p></article>
+        <article class="slider-slajd" hidden><span aria-hidden="true">✨</span><p>Nastavi pokušavati; tvoj trud gradi budućnost.</p></article>
+      </div>
+      <div class="slider-kontrole"><button type="button" id="slajdPrethodni" aria-label="Prethodna rečenica">←</button><span id="slajdBroj" aria-live="polite">1 od 30</span><button type="button" id="slajdSljedeci" aria-label="Sljedeća rečenica">→</button></div>
+    </div>
+  </section>
+  <section class="raspored-kucica-red" aria-label="Osobni raspored i kalendar">
+      <div class="ogledalo-kucica igra-kucica-pocetna">
+        <img src="zrcalo.jpg" data-rezervna-slika="smajlic.jpg" alt="Ilustracija kućice zrcala" loading="lazy" decoding="async">
+        <div class="igra-pokretac-prekrivac"><span class="kucica-opis">Učitaj sliku ili otvori kameru i dodaj efekt</span><button type="button" id="otvoriOgledalo" aria-controls="prozorOgledala" aria-expanded="false">Zrcalo</button></div>
+      </div>
+      <div class="dnevnik-kucica igra-kucica-pocetna">
+        <img src="dnevnik.jpg" data-rezervna-slika="smajlic.jpg" alt="Ilustracija kućice dnevnika" loading="lazy" decoding="async">
+        <div class="igra-pokretac-prekrivac"><span class="kucica-opis">Piši, listaj stranice i ispiši dnevnik</span><button type="button" id="otvoriDnevnik" aria-controls="prozorDnevnika" aria-expanded="false">Moj dnevnik</button></div>
+      </div>
+    <div class="igra-kucica-pocetna raspored-kucica">
+      <img src="raspored.jpg" data-rezervna-slika="smajlic.jpg" alt="Ilustracija kućice rasporeda i kalendara">
+      <div class="igra-pokretac-prekrivac"><button type="button" id="otvoriProzorRasporeda" aria-controls="prozorRasporeda" aria-expanded="false">Moj raspored<br>i kalendar</button></div>
+    </div>
+  </section>
+  <section id="prozorDnevnika" class="igra-prozor prozor-dnevnika skriveno" role="region" tabindex="-1" aria-labelledby="naslovDnevnika">
+    <div class="igra-prozor-zaglavlje"><h2 id="naslovDnevnika">Moj dnevnik</h2><button type="button" id="zatvoriDnevnik" class="zatvori-prozor" aria-label="Zatvori dnevnik">×</button></div>
+    <p class="dnevnik-napomena">Dnevnik se sprema samo u pregledniku na tvom uređaju ako dopustiš lokalnu pohranu. Ako svoj uređaj dijeliš s drugima, oni mogu vidjeti spremljene stranice. Nemoj upisivati adresu, telefon, lozinke ni druge privatne podatke.</p>
+    <fieldset class="dnevnik-zig-kontrola">
+      <legend>Vodeni žig na stranicama dnevnika</legend>
+      <button type="button" data-odaberi-dnevnik-zig="nema" aria-pressed="true">Bez žiga</button>
+      <button type="button" data-odaberi-dnevnik-zig="ruza" aria-pressed="false"><img src="ruža.jpg" alt="" aria-hidden="true"> Ruža</button>
+      <button type="button" data-odaberi-dnevnik-zig="auto" aria-pressed="false"><img src="auto1.jpg" alt="" aria-hidden="true"> Automobil</button>
+    </fieldset>
+    <div class="dnevnik-listanje" aria-label="Listanje dnevnika">
+      <button type="button" id="dnevnikPrethodna" aria-label="Prethodna stranica">‹ Prethodna</button>
+      <label for="dnevnikBrojStranice">Stranica</label><select id="dnevnikBrojStranice" aria-label="Odaberi broj stranice"></select>
+      <button type="button" id="dnevnikSljedeca" aria-label="Sljedeća stranica">Sljedeća ›</button>
+      <button type="button" id="dnevnikNovaStranica">Dodaj stranicu</button>
+    </div>
+    <div class="dnevnik-radnje"><label for="dnevnikBrojPrimjeraka">Broj primjeraka za ispis</label><select id="dnevnikBrojPrimjeraka"><option value="1">1 primjerak</option><option value="2">2 primjerka</option><option value="3">3 primjerka</option><option value="4">4 primjerka</option><option value="5">5 primjeraka</option><option value="6">6 primjeraka</option><option value="7">7 primjeraka</option><option value="8">8 primjeraka</option><option value="9">9 primjeraka</option><option value="10">10 primjeraka</option></select></div>
+    <article class="dnevnik-papir" id="dnevnikPapir">
+      <label for="dnevnikDatum">Datum</label><input id="dnevnikDatum" type="date">
+      <label for="dnevnikNaslov">Naslov stranice</label><input id="dnevnikNaslov" type="text" maxlength="100" placeholder="Kako je prošao moj dan?">
+      <label for="dnevnikTekst">Moja bilješka</label>
+      <fieldset class="dnevnik-emotikoni"><legend>Dodaj smajlić u bilješku</legend><button type="button" data-dnevnik-emotikon="😊" aria-label="Dodaj nasmiješeni smajlić">😊</button><button type="button" data-dnevnik-emotikon="😄" aria-label="Dodaj veseli smajlić">😄</button><button type="button" data-dnevnik-emotikon="🙂" aria-label="Dodaj blagi smajlić">🙂</button><button type="button" data-dnevnik-emotikon="😍" aria-label="Dodaj smajlić sa srcima">😍</button><button type="button" data-dnevnik-emotikon="😢" aria-label="Dodaj tužni smajlić">😢</button><button type="button" data-dnevnik-emotikon="😴" aria-label="Dodaj pospani smajlić">😴</button><button type="button" data-dnevnik-emotikon="❤️" aria-label="Dodaj srce">❤️</button><button type="button" data-dnevnik-emotikon="⭐" aria-label="Dodaj zvjezdicu">⭐</button></fieldset>
+      <div class="dnevnik-polje-pisanja"><div class="dnevnik-vodeni-zig" id="dnevnikVodeniZig" data-dnevnik-zig="nema" aria-hidden="true"><img id="dnevnikVodeniZigSlika" alt=""></div><textarea id="dnevnikTekst" rows="12" maxlength="5000" placeholder="Piši ovdje..."></textarea></div>
+      <div id="dnevnikSadrzajIspisa" class="dnevnik-sadrzaj-ispisa" hidden>
+        <h2 class="dnevnik-naslov-ispisa">Moj dnevnik</h2>
+        <p id="dnevnikDatumIspisa" class="dnevnik-datum-ispisa"></p>
+        <h3 id="dnevnikNaslovIspisa"></h3>
+        <div id="dnevnikTekstIspisa" class="dnevnik-tekst-ispisa"></div>
+      </div>
+    </article>
+    <div id="dnevnikIspisPrimjerci" class="dnevnik-ispis-primjerci" hidden></div>
+    <img id="dnevnikZigIspisa" class="dnevnik-zig-ispisa" alt="" hidden>
+    <div class="dnevnik-radnje"><button type="button" id="dnevnikSpremi">Spremi stranicu</button><button type="button" id="dnevnikObrisi">Obriši stranicu</button><button type="button" id="dnevnikIspisi">Ispiši odabranu stranicu</button></div>
+    <p id="dnevnikPoruka" role="status" aria-live="polite"></p>
+  </section>
+  <section id="prozorRasporeda" class="igra-prozor prozor-rasporeda skriveno" role="region" tabindex="-1" aria-labelledby="naslovMogRasporeda">
+    <div class="igra-prozor-zaglavlje"><h2 id="naslovMogRasporeda">Moj raspored sati i kalendar</h2><button type="button" id="zatvoriProzorRasporeda" class="zatvori-prozor" aria-label="Zatvori raspored i kalendar">×</button></div>
+    <section id="mojRaspored" class="moj-raspored" aria-labelledby="naslovRasporedaSati" hidden>
+      <h3 id="naslovRasporedaSati">Moj raspored sati</h3>
+      <p>Dodaj svoje sate. Raspored vidi samo prijavljeni korisnik na ovom uređaju.</p>
+      <button type="button" id="ispisiRaspored">Ispiši raspored i kalendar</button>
+      <form id="obrazacRasporeda" class="raspored-obrazac">
+        <div class="polje-rasporeda"><label for="rasporedDan">Dan u tjednu</label><select id="rasporedDan" required><option value="Ponedjeljak">Ponedjeljak</option><option value="Utorak">Utorak</option><option value="Srijeda">Srijeda</option><option value="Četvrtak">Četvrtak</option><option value="Petak">Petak</option></select></div>
+        <div class="polje-rasporeda"><label for="rasporedSat">Školski sat</label><select id="rasporedSat" required><option value="1">1. sat</option><option value="2">2. sat</option><option value="3">3. sat</option><option value="4">4. sat</option><option value="5">5. sat</option><option value="6">6. sat</option><option value="7">7. sat</option><option value="8">8. sat</option></select></div>
+        <div class="polje-rasporeda"><label for="rasporedDioDana">Dio dana</label><select id="rasporedDioDana" required><option value="Jutro">Jutro</option><option value="Poslijepodne">Poslijepodne</option></select></div>
+        <div class="polje-rasporeda polje-predmeta"><label for="rasporedPredmet">Predmet</label><input id="rasporedPredmet" maxlength="60" required placeholder="Na primjer: Matematika"></div>
+        <div class="polje-rasporeda polje-vremena"><label for="rasporedVrijeme">Početak, neobavezno</label><input id="rasporedVrijeme" type="time"></div>
+        <div class="polje-rasporeda"><label for="rasporedUcionica">Učionica ili bilješka</label><input id="rasporedUcionica" maxlength="60" placeholder="Na primjer: Učionica 12"></div>
+        <button type="submit">Dodaj sat</button>
+      </form>
+      <p id="rasporedPoruka" aria-live="polite"></p>
+      <div class="raspored-tablica" tabindex="0"><table><caption>Tjedni raspored sati</caption><thead><tr><th scope="col">Sat</th><th scope="col">Ponedjeljak</th><th scope="col">Utorak</th><th scope="col">Srijeda</th><th scope="col">Četvrtak</th><th scope="col">Petak</th></tr></thead><tbody id="rasporedTijelo"></tbody></table></div>
+      <div id="rasporedStariUnosi" class="raspored-stari-unosi" hidden></div>
+      <section class="moj-kalendar" aria-labelledby="naslovMogKalendara">
+        <h3 id="naslovMogKalendara">Moj kalendar</h3><p>Označi test, rođendan, izlet ili bilo koji važan datum.</p>
+        <form id="obrazacKalendara" class="raspored-obrazac"><label for="kalendarDatum">Datum</label><input id="kalendarDatum" type="date" required><label for="kalendarVrijeme">Vrijeme</label><input id="kalendarVrijeme" type="time"><label for="kalendarDogadaj">Važan događaj</label><input id="kalendarDogadaj" maxlength="100" required placeholder="Na primjer: Test iz prirode"><label for="kalendarBiljeska">Bilješka (neobavezno)</label><input id="kalendarBiljeska" maxlength="240" placeholder="Što treba ponijeti ili pripremiti?"><button type="submit">Dodaj u kalendar</button></form>
+        <p id="kalendarPoruka" aria-live="polite"></p><p id="kalendarPodsjetnik" class="kalendar-podsjetnik" aria-live="polite"></p><ul id="kalendarPopis" class="kalendar-popis" aria-live="polite"></ul>
+      </section>
+    </section>
+  </section>
+
+  <main id="glavniSadrzaj">
+
+    <section id="autor" class="odjeljak o-autoru" hidden>
+      <div class="naslov-odjeljka"><span aria-hidden="true">✍️</span><div><h2>O autorici</h2><p>Upoznaj osobu iza priča i ideja.</p></div></div>
+      <p>Ja sam Marica Barušić. Volim zaigrane boje, priče i ideje koje pretvaraju učenje u nešto praktično. Ova stranica okuplja moje igre, tekstove i bilješke o izradi weba.</p>
+      <a class="gumb-poveznica" href="mailto:ymaricay@hotmail.com">Javi mi se e-poštom</a>
+    </section>
+    <section id="igre" class="odjeljak bez-pozadine" aria-label="Igraonica">
+      <div class="igra-pozornica">
+      <div class="igra-kucice">
+        <div class="igra-kucica-pocetna">
+          <img src="instrukcije.jpg" data-rezervna-slika="smajlic.jpg" alt="Ilustracija kućice instrukcija" loading="lazy" decoding="async">
+          <div class="igra-pokretac-prekrivac"><span class="kucica-opis">Instrukcije po razredu i predmetu</span><button type="button" id="otvoriProzorVideoUputa" aria-label="YouTube instrukcije po razredu i predmetu" aria-controls="prozorVideoUputa" aria-expanded="false">Instrukcije</button></div>
+        </div>
+        <div class="igra-kucica-pocetna">
+          <img src="igre.jpg" data-rezervna-slika="smajlic.jpg" alt="Ilustracija kućice igara" loading="lazy" decoding="async">
+          <div class="igra-pokretac-prekrivac"><span class="kucica-opis">Za pamćenje i razbibrigu</span><button type="button" id="otvoriProzorIgara" aria-label="Igre za pamćenje i razbibrigu" aria-controls="prozorIgara" aria-expanded="false">Igre</button></div>
+        </div>
+        <div class="igra-kucica-pocetna">
+          <img src="crtanje.jpg" data-rezervna-slika="smajlic.jpg" alt="Ilustracija kućice za crtanje" loading="lazy" decoding="async">
+          <div class="igra-pokretac-prekrivac"><span class="kucica-opis">Crtaj, bojaj i uređuj slike</span><button type="button" id="otvoriProzorCrtanja" aria-label="Crtaj: bojaj i uređuj slike" aria-controls="prozorCrtanja" aria-expanded="false">Crtaj</button></div>
+        </div>
+        <div class="igra-kucica-pocetna">
+          <img src="pisanje.jpg" data-rezervna-slika="smajlic.jpg" alt="Ilustracija kućice za pisanje priča" loading="lazy" decoding="async">
+          <div class="igra-pokretac-prekrivac"><span class="kucica-opis">Čitaj i piši priče</span><button type="button" id="otvoriProzorPisanja" aria-label="Piši priče" aria-controls="prozorPisanja" aria-expanded="false">Pisanje</button></div>
+        </div>
+        <div class="igra-kucica-pocetna">
+          <img src="moj-blog.jpg" data-rezervna-slika="smajlic.jpg" alt="Ilustracija kućice Moj blog" loading="lazy" decoding="async">
+          <div class="igra-pokretac-prekrivac"><button type="button" id="otvoriProzorBloga" aria-controls="prozorMogBloga" aria-expanded="false">Moj blog</button></div>
+        </div>
+        <div class="igra-kucica-pocetna">
+          <img src="o-stranici.jpg" data-rezervna-slika="smajlic.jpg" alt="Ilustracija kućice o stranici" loading="lazy" decoding="async">
+          <div class="igra-pokretac-prekrivac"><span class="kucica-opis">Kratka poduka o trima dijelovima web-stranice</span><button type="button" id="otvoriProzorOStranici" aria-controls="o-stranici" aria-expanded="false">HTML, CSS i JavaScript</button></div>
+        </div>
+        <div class="igra-kucica-pocetna">
+          <img src="trgovina.jpg" data-rezervna-slika="minimi.jpg" alt="Ilustracija kućice trgovine" loading="lazy" decoding="async">
+          <div class="igra-pokretac-prekrivac"><button type="button" id="otvoriProzorTrgovine" aria-controls="prozorTrgovine" aria-expanded="false">Mala trgovina</button></div>
+        </div>
+      </div>
+      <div id="prozorIgara" class="igra-prozor skriveno" role="region" tabindex="-1" aria-labelledby="naslovIzboraIgara">
+        <div class="igra-prozor-zaglavlje"><h3 id="naslovIzboraIgara">Odaberi igru</h3><button type="button" id="zatvoriProzorIgara" class="zatvori-prozor" aria-label="Zatvori prozor igara">×</button></div>
+      <div class="filter-igre" role="group" aria-label="Filtriraj igre po vrsti">
+        <button type="button" class="filter-igara aktivna" data-filter="sve" aria-pressed="true">Sve igre</button>
+        <button type="button" class="filter-igara" data-filter="pamcenje" aria-pressed="false">Za pamćenje</button>
+        <button type="button" class="filter-igara" data-filter="razbibriga" aria-pressed="false">Za razbibrigu</button>
+        <button type="button" class="filter-igara" data-filter="brzi-prsti" aria-pressed="false">Za brze prste</button>
+      </div>
+      <div class="igre-kartice">
+        <button type="button" class="igra-izbor" data-igra="memory" data-kategorija="pamcenje" aria-pressed="false"><span aria-hidden="true">🧠</span><b>Memory</b><small>Pronađi iste sličice</small></button>
+        <button type="button" class="igra-izbor" data-igra="ksp" data-kategorija="razbibriga" aria-pressed="false"><span aria-hidden="true">✂️</span><b>Kamen, škare, papir</b><small>10 rundi protiv računala</small></button>
+        <button type="button" class="igra-izbor" data-igra="krizic" data-kategorija="razbibriga" aria-pressed="false"><span aria-hidden="true">❌</span><b>Križić-kružić</b><small>Spoji tri znaka</small></button>
+        <button type="button" class="igra-izbor" data-igra="vjesala" data-kategorija="razbibriga" aria-pressed="false"><span aria-hidden="true">🔤</span><b>Vješala</b><small>Pogodi riječ u 10 rundi</small></button>
+        <button type="button" class="igra-izbor" data-igra="krtica" data-kategorija="brzi-prsti" aria-pressed="false"><span aria-hidden="true">🐹</span><b>Udari krticu</b><small>Skupi bodove na vrijeme</small></button>
+        <button type="button" class="igra-izbor" data-igra="zmija" data-kategorija="brzi-prsti" aria-pressed="false"><span aria-hidden="true">🐍</span><b>Zmijica</b><small>Pojedi što više hrane</small></button>
+      </div>
+
+      <div id="igraKucica" class="igra-kucica skriveno" tabindex="-1">
+        <div class="igra-zaglavlje"><h3 id="naslovIgre">Igra</h3><button type="button" id="zatvoriIgru" class="zatvori-prozor" aria-label="Zatvori trenutačnu igru">×</button></div>
+
+        <div class="igra-panel skriveno" id="igra-memory">
+          <p>Okreni dvije kartice i pronađi parove.</p>
+          <div id="memoryMreza" class="memory-mreza"></div>
+          <p id="memoryPoruka" class="poruka-igre" role="status" aria-live="polite" aria-atomic="true"></p>
+          <button type="button" id="memoryPonovno">Nova igra</button>
+        </div>
+
+        <div class="igra-panel skriveno" id="igra-ksp">
+          <p>Odaberi svoj potez:</p>
+          <div class="red-gumba"><button type="button" data-potez="Kamen">🪨 Kamen</button><button type="button" data-potez="Škare">✂️ Škare</button><button type="button" data-potez="Papir">📄 Papir</button></div>
+          <p id="kspPoruka" class="poruka-igre" role="status" aria-live="polite" aria-atomic="true">Sretno!</p>
+          <p id="kspRezultat" aria-live="polite">Runda: <span id="kspRunda">0</span> od 10. Bodovi — ti: <b id="bodoviTi">0</b>, računalo: <b id="bodoviRacunalo">0</b></p>
+          <button type="button" id="kspPonovno" hidden>Nova igra</button>
+        </div>
+
+        <div class="igra-panel skriveno" id="igra-krizic">
+          <p id="krizicPoruka" class="poruka-igre" aria-live="polite">Na redu je X.</p>
+          <p>Odaberi polje tipkom Tab pa pritisni Enter ili razmaknicu. Čitač zaslona javlja znak u svakom polju i čiji je potez.</p>
+          <div id="krizicPloca" class="krizic-ploca" role="group" aria-label="Ploča za križić-kružić"></div>
+          <button type="button" id="krizicPonovno">Nova runda</button>
+        </div>
+
+        <div class="igra-panel skriveno" id="igra-vjesala">
+          <p>Pogodi riječ iz škole i svakodnevnog života. Imaš šest pokušaja i deset rundi.</p>
+          <p id="vjesalaRunda" aria-live="polite">Riječ: 0 od 10. Bodovi: 0.</p>
+          <p class="vjesala-rijec" id="vjesalaRijec"></p>
+          <p>Preostalo pokušaja: <b id="vjesalaZivoti">6</b></p>
+          <div id="vjesalaTipke" class="vjesala-tipke"></div>
+          <p id="vjesalaPoruka" class="poruka-igre" aria-live="polite"></p>
+          <button type="button" id="vjesalaPonovno" hidden>Sljedeća riječ</button>
+        </div>
+
+        <div class="igra-panel skriveno" id="igra-krtica">
+          <p>Bodovi: <b id="krticaBodovi">0</b> · Vrijeme: <b id="krticaVrijeme">20</b> s</p>
+          <div id="krticaMreza" class="krtica-mreza"></div>
+          <p id="krticaPoruka" class="poruka-igre" aria-live="polite"></p>
+          <button type="button" id="krticaStart">Pokreni igru</button>
+        </div>
+
+        <div class="igra-panel skriveno" id="igra-zmija">
+          <p>Bodovi: <b id="zmijaBodovi">0</b> · Koristi strelice ili gumbe.</p>
+          <canvas id="zmijaPlatno" width="360" height="360" aria-label="Igra zmijice"></canvas>
+          <div class="zmija-kontrole">
+            <button type="button" data-smjer="GORE" aria-label="Zmijica: gore">⬆️</button>
+            <div><button type="button" data-smjer="LIJEVO" aria-label="Zmijica: lijevo">⬅️</button><button type="button" data-smjer="DOLJE" aria-label="Zmijica: dolje">⬇️</button><button type="button" data-smjer="DESNO" aria-label="Zmijica: desno">➡️</button></div>
+          </div>
+          <p id="zmijaPoruka" class="poruka-igre" aria-live="polite"></p>
+          <button type="button" id="zmijaStart">Pokreni zmijicu</button>
+        </div>
+
+      </div>
+      </div>
+      <div id="prozorVideoUputa" class="igra-prozor skriveno" role="region" tabindex="-1" aria-labelledby="naslovVideoUputa">
+        <div class="igra-prozor-zaglavlje"><h3 id="naslovVideoUputa">YouTube instrukcije za sve razrede i predmete</h3><button type="button" id="zatvoriProzorVideoUputa" class="zatvori-prozor" aria-label="Zatvori YouTube instrukcije">×</button></div>
+        <div id="video-upute" class="video-upute">
+          <p id="videoNavigacijaUputa">Tipkom Tab dođi do polja za razred i predmet. Strelicama odaberi stavku, a zatim tipkom Tab dođi do poveznice i pritisni Enter za otvaranje YouTube rezultata.</p>
+          <p id="videoIzborStatus">Odaberi razred i predmet za traženje instrukcija.</p>
+          <div class="video-odabir"><label for="videoRazred">Razred</label><select id="videoRazred" aria-describedby="videoNavigacijaUputa"><optgroup label="Osnovna škola"><option value="1. razred osnovne škole">1. razred</option><option value="2. razred osnovne škole">2. razred</option><option value="3. razred osnovne škole">3. razred</option><option value="4. razred osnovne škole">4. razred</option><option value="5. razred osnovne škole">5. razred</option><option value="6. razred osnovne škole">6. razred</option><option value="7. razred osnovne škole">7. razred</option><option value="8. razred osnovne škole">8. razred</option></optgroup><optgroup label="Srednja škola"><option value="1. razred srednje škole">1. razred srednje</option><option value="2. razred srednje škole">2. razred srednje</option><option value="3. razred srednje škole">3. razred srednje</option><option value="4. razred srednje škole">4. razred srednje</option></optgroup></select>
+            <label for="videoPredmet">Predmet</label><select id="videoPredmet" aria-describedby="videoNavigacijaUputa">
+              <optgroup label="Osnovna škola">
+                <option value="matematika">Matematika</option><option value="hrvatski jezik">Hrvatski jezik</option><option value="engleski jezik">Engleski jezik</option><option value="njemački jezik">Njemački jezik</option><option value="talijanski jezik">Talijanski jezik</option><option value="francuski jezik">Francuski jezik</option><option value="španjolski jezik">Španjolski jezik</option>
+                <option value="priroda i društvo">Priroda i društvo</option><option value="priroda">Priroda</option><option value="biologija">Biologija</option><option value="kemija">Kemija</option><option value="fizika">Fizika</option><option value="povijest">Povijest</option><option value="geografija">Geografija</option><option value="informatika">Informatika</option><option value="tehnička kultura">Tehnička kultura</option><option value="likovna kultura">Likovna kultura</option><option value="glazbena kultura">Glazbena kultura</option><option value="tjelesna i zdravstvena kultura">Tjelesna i zdravstvena kultura</option><option value="vjeronauk">Vjeronauk</option>
+              </optgroup>
+              <optgroup label="Srednja škola">
+                <option value="matematika">Matematika</option><option value="hrvatski jezik">Hrvatski jezik</option><option value="engleski jezik">Engleski jezik</option><option value="njemački jezik">Njemački jezik</option><option value="talijanski jezik">Talijanski jezik</option><option value="francuski jezik">Francuski jezik</option><option value="španjolski jezik">Španjolski jezik</option><option value="latinski jezik">Latinski jezik</option>
+                <option value="biologija">Biologija</option><option value="kemija">Kemija</option><option value="fizika">Fizika</option><option value="povijest">Povijest</option><option value="geografija">Geografija</option><option value="informatika">Informatika</option><option value="likovna umjetnost">Likovna umjetnost</option><option value="glazbena umjetnost">Glazbena umjetnost</option><option value="tjelesna i zdravstvena kultura">Tjelesna i zdravstvena kultura</option><option value="vjeronauk">Vjeronauk</option><option value="etika">Etika</option><option value="filozofija">Filozofija</option><option value="psihologija">Psihologija</option><option value="sociologija">Sociologija</option><option value="logika">Logika</option><option value="politika i gospodarstvo">Politika i gospodarstvo</option>
+                <optgroup label="Pravni i upravni smjerovi"><option value="Uvod u državu i pravo">Uvod u državu i pravo</option><option value="Ustavni ustroj RH">Ustavni ustroj RH</option><option value="Radno pravo">Radno pravo</option><option value="Upravni postupak">Upravni postupak</option><option value="Kompjutorska daktilografija">Kompjutorska daktilografija</option></optgroup>
+              </optgroup>
+            </select>
+            <a id="videoPretraga" class="gumb-poveznica" href="https://www.youtube.com/results?search_query=matematika+1.+razred+osnovne+skole+lekcije+instrukcije+Hrvatska" target="_blank" rel="noopener noreferrer">Pronađi instrukcije na YouTubeu</a>
+          </div>
+          <p class="demo-napomena">Poveznica traži lekcije i instrukcije za odabrani razred i predmet. Rezultati na YouTubeu mogu se mijenjati; roditelj ili učitelj treba pregledati video prije nego što ga dijete pogleda.</p>
+          <p>Dodatni obrazovni sadržaj: <a href="https://edutorij.carnet.hr/" target="_blank" rel="noopener noreferrer">CARNET Edutorij</a>.</p>
+        </div>
+      </div>
+      <section id="o-stranici" class="igra-prozor odjeljak o-stranici skriveno" role="region" tabindex="-1" aria-labelledby="naslovOvojStranici" hidden>
+        <div class="naslov-odjeljka"><span aria-hidden="true">💻</span><div><h2 id="naslovOvojStranici">HTML, CSS i JavaScript</h2><p>Tri dijela rade zajedno kako bi web-stranica oživjela.</p></div></div>
+        <p>HTML stvara sadržaj stranice, poput naslova, priča, slika i gumba. CSS uređuje izgled i raspored tih dijelova. JavaScript dodaje radnje, pa stranica može reagirati kad nešto klikneš.</p>
+        <div class="tehnologije-primjeri">
+          <details class="tehnologija-stavka"><summary>HTML — što se nalazi na stranici?</summary><div><p><strong>HTML</strong> je poput nacrta kućice. Njime kažemo pregledniku što treba prikazati: naslov, priču, sliku, poveznicu ili gumb. Oznake obično dolaze u paru: jedna otvara dio, a druga ga zatvara.</p><p>Primjer: prvi red stvara veliki naslov, a drugi običan odlomak.</p><pre><code>&lt;h1&gt;Moja vesela priča&lt;/h1&gt;
+&lt;p&gt;Jednog jutra medo je pronašao zlatni ključ.&lt;/p&gt;</code></pre></div></details>
+          <details class="tehnologija-stavka"><summary>CSS — kako stranica izgleda?</summary><div><p><strong>CSS</strong> je poput bojica i ukrasa. Njime uređujemo izgled onoga što je HTML stavio na stranicu. Pogledaj kratki primjer:</p><pre><code>h1 {
+  color: purple;
+}</code></pre><p>Čitaj ga ovako:</p><ul><li><code>h1</code> znači glavni naslov.</li><li><code>{</code> označava početak uputa, a <code>}</code> njihov kraj.</li><li><code>color</code> znači boja slova.</li><li><code>purple</code> je ljubičasta boja.</li></ul><p>Cijeli primjer zato znači: „Glavni naslov oboji ljubičasto.” Zamijeni <code>purple</code> s <code>blue</code> i naslov bi bio plav.</p></div></details>
+          <details class="tehnologija-stavka"><summary>JavaScript — kako stranica reagira?</summary><div><p><strong>JavaScript</strong> daje stranici upute za radnje. Primjerice, može pokazati poruku ili pokrenuti igru.</p><p>Ovaj mali primjer traži od preglednika da pokaže pozdrav:</p><pre><code>alert("Bok!");</code></pre><p><code>alert</code> znači „pokaži poruku”, a <code>"Bok!"</code> je tekst poruke. Točka-zarez <code>;</code> označava kraj ove upute.</p></div></details>
+        </div>
+        <p class="demo-napomena">Ukratko: HTML složi dijelove, CSS ih uljepša, a JavaScript im pomogne reagirati. Tako zajedno rade i na ovoj stranici.</p>
+      </section>
+      <div id="prozorTrgovine" class="igra-prozor skriveno" role="region" tabindex="-1" aria-labelledby="naslovProzoraTrgovine">
+        <div class="igra-prozor-zaglavlje"><h3 id="naslovProzoraTrgovine">Mala trgovina</h3><button type="button" id="zatvoriProzorTrgovine" class="zatvori-prozor" aria-label="Zatvori trgovinu">×</button></div>
+        <p class="napomena-cijene">Upiši naziv svakog proizvoda, sidrenu cijenu i prodajnu cijenu s PDV-om. X je samo oznaka praznog mjesta za unos.</p>
+        <p>Dodaj naziv, sidrenu i prodajnu cijenu te po želji sliku. Artikl možeš dodati odmah, a cijene unijeti poslije.</p>
+        <div id="proizvodi" class="proizvodi-mreza"></div>
+        <button type="button" id="dodajNoviProizvod">+ Dodaj novi proizvod</button>
+        <button type="button" id="otvoriKosaricu" aria-controls="kosarica" aria-expanded="false">🧺 Moja košarica (<span id="brojArtikalaMini" aria-live="polite">0</span>)</button>
+        <p id="kupnjaZahvala" class="poruka-igre" aria-live="polite" hidden></p>
+    <section id="kosarica" class="odjeljak kosarica" hidden>
+      <div class="naslov-odjeljka"><span>🧺</span><div><h2>Moja košarica</h2><p>Dodaj proizvod, promijeni količinu ili ga ukloni.</p></div><button type="button" class="zatvori-prozor" data-zatvori-kosaricu aria-label="Zatvori košaricu">×</button></div>
+      <div class="ukupno-linije" aria-label="Ukupni iznosi košarice">
+        <p>Broj artikala: <b id="brojArtikala">0</b></p>
+        <p>Ukupno bez PDV-a: <b id="iznosBezPdv" aria-live="polite">0,00 €</b></p>
+        <p>PDV (25%): <b id="iznosPdv">0,00 €</b></p>
+        <p class="ukupno">Ukupno za platiti: <b id="iznosUkupno" aria-live="polite">0,00 €</b></p>
+        <p id="ukupnoNapomena" class="ukupno-napomena" hidden>Unesi cijene za sve artikle kako bi se izračunali PDV i ukupni iznos.</p>
+      </div>
+      <div id="kosaricaSadrzaj" class="kosarica-sadrzaj" aria-live="polite"><p>Košarica je prazna. Odaberi nešto iz trgovine!</p></div>
+
+      <button type="button" id="kupiGumb" class="gumb-kupi" disabled>Završi kupnju</button>
+      <p id="kupnjaPoruka" class="poruka-igre" aria-live="polite"></p>
+      
+      <form id="obrazacNarudzbe" class="narudzba-obrazac" hidden>
+        <h3>Podaci za narudžbu</h3>
+        <label for="imeNarucioca">Ime i prezime</label>
+        <input id="imeNarucioca" name="name" autocomplete="name" required>
+        <label for="emailNarucioca">E-pošta</label>
+        <input id="emailNarucioca" name="email" type="email" autocomplete="email" required>
+        <label for="telefonNarucioca">Telefon</label>
+        <input id="telefonNarucioca" name="tel" type="tel" autocomplete="tel" required>
+        <label for="adresaNarucioca">Adresa</label>
+        <input id="adresaNarucioca" name="street-address" autocomplete="street-address" required>
+        <label for="gradNarucioca">Grad</label>
+        <input id="gradNarucioca" name="address-level2" autocomplete="address-level2" required>
+        <label for="postanskiBroj">Poštanski broj</label>
+        <input id="postanskiBroj" name="postal-code" autocomplete="postal-code" inputmode="numeric" required>
+        <label for="nacinPlacanja">Način plaćanja</label>
+        <select id="nacinPlacanja" name="payment" required>
+          <option value="">Odaberi način plaćanja</option>
+          <option value="kartica">Platna kartica</option>
+          <option value="pouzece">Pouzeće</option>
+          <option value="uplata">Bankovna uplata</option>
+        </select>
+        <section id="bankovnaUplataKosarica" class="bankovna-uplata" hidden>
+          <h4>Podaci za bankovnu uplatu</h4><div id="podaciUplateKosarica"></div>
+          <p class="demo-napomena">Kod za plaćanje mora odgovarati iznosu ove narudžbe. Za pravu prodaju provjeri ga u banci prije objave.</p>
+        </section>
+        <fieldset id="karticaPodaci" hidden>
+          <legend>Probni podaci kartice</legend>
+          <p>Upiši samo nule. Podaci se ne šalju i ne spremaju.</p>
+          <label for="imeNaKartici">Ime na probnoj kartici</label>
+          <input id="imeNaKartici" autocomplete="off">
+          <label for="brojKartice">Probni broj kartice, 16 nula</label>
+          <input id="brojKartice" inputmode="numeric" autocomplete="off" maxlength="16" pattern="0{16}" placeholder="0000000000000000">
+          <label for="istekKartice">Rok valjanosti, probni podatak</label>
+          <input id="istekKartice" inputmode="numeric" autocomplete="off" maxlength="5" pattern="(0[1-9]|1[0-2])/[0-9]{2}" placeholder="12/30">
+          <label for="sigurnosniBroj">Sigurnosni broj, tri nule</label>
+          <input id="sigurnosniBroj" inputmode="numeric" autocomplete="off" maxlength="3" pattern="000" placeholder="000">
+        </fieldset>
+        <button type="submit">Potvrdi narudžbu</button>
+        <p id="narudzbaPoruka" class="poruka-igre" aria-live="polite"></p>
+      </form>
+      <button type="button" class="zatvori-prozor zatvori-podnozje" data-zatvori-kosaricu aria-label="Zatvori košaricu">×</button>
+    </section>
+      </div>
+      <div id="prozorMogBloga" class="igra-prozor skriveno" role="region" tabindex="-1" aria-labelledby="naslovProzoraBloga">
+        <div class="igra-prozor-zaglavlje"><h3 id="naslovProzoraBloga">Moj blog</h3><button type="button" id="zatvoriProzorBloga" class="zatvori-prozor" aria-label="Zatvori moj blog">×</button></div>
+        <div id="blogProzorSadrzaj"></div>
+      </div>
+      <div id="prozorCrtanja" class="igra-prozor skriveno" role="region" tabindex="-1" aria-labelledby="naslovProzoraCrtanja">
+        <div class="igra-prozor-zaglavlje"><h3 id="naslovProzoraCrtanja">Crtaj i uređuj slike</h3><button type="button" id="zatvoriProzorCrtanja" class="zatvori-prozor" aria-label="Zatvori kućicu za crtanje">×</button></div>
+        <p>Crtaš mišem, prstom ili tipkovnicom. Crtež možeš preuzeti i spremiti na svoj uređaj. Ako želiš javnu objavu, pošalji ga na odobrenje. Rad mora biti pristojan: bez vrijeđanja, ruganja, prijetnji ni tuđih privatnih podataka. Odrasla osoba treba ga pregledati prije objave. U ovoj verziji odobreni radovi vide se samo u ovom pregledniku; javna objava svima još nije povezana.</p>
+        <div class="alatna-traka-crtanja">
+          <label for="crtajBoja">Boja</label><select id="crtajBoja"><option value="black">Crna</option><option value="gray">Siva</option><option value="silver">Srebrna</option><option value="darkblue">Tamnoplava</option><option value="deepskyblue">Svijetloplava</option><option value="red">Crvena</option><option value="deeppink">Roza</option><option value="forestgreen">Zelena</option><option value="limegreen">Svijetlozelena</option><option value="darkorange">Narančasta</option><option value="saddlebrown">Smeđa</option><option value="mediumorchid">Ljubičasta</option><option value="gold">Zlatna</option><option value="yellow">Žuta</option></select>
+          <label for="crtajPodloga">Podloga platna</label><select id="crtajPodloga"><option value="white">Svijetla</option><option value="midnightblue">Tamnoplava</option><option value="black">Crna</option></select>
+          <label for="crtajDebljina">Debljina crte</label><input id="crtajDebljina" type="range" min="2" max="40" value="8"><span id="crtajDebljinaVrijednost">8</span>
+          <span class="oznaka-alata">Odaberi alat za crtanje</span>
+          <div class="izbor-alata-crtanja" role="group" aria-label="Alati za crtanje">
+            <button type="button" class="gumb-alata-crtanja odabrani-alat" data-alat-crtanja="olovka" aria-pressed="true"><span aria-hidden="true">✏️</span><span>Olovka</span></button>
+            <button type="button" class="gumb-alata-crtanja" data-alat-crtanja="kist" aria-pressed="false"><span aria-hidden="true">🖌️</span><span>Kist</span></button>
+            <button type="button" class="gumb-alata-crtanja" data-alat-crtanja="sprej" aria-pressed="false"><span aria-hidden="true">💨</span><span>Sprej</span></button>
+            <button type="button" class="gumb-alata-crtanja" data-alat-crtanja="kanta" aria-pressed="false"><span aria-hidden="true">🪣</span><span>Kanta</span></button>
+            <button type="button" class="gumb-alata-crtanja" data-alat-crtanja="gumica" aria-pressed="false"><span aria-hidden="true">🧽</span><span>Gumica</span></button>
+          </div>
+          <select class="sr-only" id="crtajAlat" tabindex="-1" aria-hidden="true"><option value="olovka">Olovka</option><option value="kist">Kist</option><option value="sprej">Sprej</option><option value="kanta">Kanta</option><option value="gumica">Gumica</option></select>
+          <p id="uputaZaAlatCrtanja" class="uputa-alata-crtanja" aria-live="polite">Olovka crta tanku crtu. Odaberi je, pa povuci pokazivač po platnu.</p>
+          <label for="ucitajSlikuCrtanja">Učitaj sliku</label><input id="ucitajSlikuCrtanja" type="file" accept="image/*">
+          <label for="predlozakCrtanja">Crno-bijeli predložak</label><select id="predlozakCrtanja"><option value="">Odaberi predložak</option><option value="smjesko">Smješko</option><option value="kucica">Kućica</option><option value="cvijet">Cvijet</option><option value="riba">Ribica</option></select><button type="button" id="otvoriPredlozak">Otvori predložak za bojanje</button>
+          <label for="potpisCrteza">Ime ili nadimak na radu (bez prezimena)</label><input id="potpisCrteza" maxlength="24" autocomplete="nickname" placeholder="Npr. Sunčica" required>
+          <label for="imeCrteza">Naziv spremljene slike</label><input id="imeCrteza" maxlength="60" value="moj-crtez">
+          <label for="opisCrteza">Opis slike (neobavezno)</label><input id="opisCrteza" maxlength="180" placeholder="Ako želiš, opiši svoj crtež">
+          <button type="button" id="ponistiCrtanje">Poništi zadnji potez</button><button type="button" id="obrisiPlatno">Očisti platno</button><button type="button" id="spremiCrtez">Preuzmi sliku</button><button type="button" id="ispisiCrtez">Ispiši crtež s logom</button><button type="button" id="posaljiNaOdobrenje">Pošalji na odobrenje</button>
+        </div>
+        <canvas id="platnoCrtanja" width="900" height="520" tabindex="0" role="application" aria-label="Platno za crtanje. Strelicama pomiči kursor, Enterom uključi ili isključi crtanje."></canvas>
+        <p id="crtanjePoruka" aria-live="polite">Platno je prazno. Tipkovnicom: strelice pomiču kursor, Enter uključuje ili zaustavlja crtanje.</p>
+        <p id="odobrenjePoruka" aria-live="polite"></p>
+        <section id="panelOdobrenjaRadova" hidden aria-labelledby="naslovOdobrenjaRadova"><h4 id="naslovOdobrenjaRadova">Radovi na čekanju za tvoje odobrenje</h4><p id="brojRadovaNaCekanju" class="broj-radova-ceka" role="status" aria-live="polite" aria-atomic="true">Nema radova na čekanju.</p><p>Pregledaj crtež pa izaberi „Odobri objavu” ili „Odbij rad”.</p><div id="radoviNaPregledu" aria-live="polite"></div></section>
+        <section aria-labelledby="naslovOdobreniRadovi"><h4 id="naslovOdobreniRadovi">Odobreni radovi</h4><div id="odobreniRadovi" class="odobreni-radovi" aria-live="polite"></div></section>
+        <dialog id="uvecaniRadProzor" aria-labelledby="uvecaniRadNaslov" class="prozor-uvecanog-rada">
+          <div class="zaglavlje-uvecanog-rada"><h3 id="uvecaniRadNaslov">Rad</h3><button type="button" id="zatvoriUvecaniRad" aria-label="Zatvori uvećani rad">Zatvori</button></div>
+          <img id="uvecaniRadSlika" alt="Uvećani dječji crtež">
+        </dialog>
+      </div>
+      <div id="prozorPisanja" class="igra-prozor skriveno" role="region" tabindex="-1" aria-labelledby="naslovProzoraPisanja">
+        <div class="igra-prozor-zaglavlje"><h3 id="naslovProzoraPisanja">Vaše priče / Izrazite se</h3><button type="button" id="zatvoriProzorPisanja" class="zatvori-prozor" aria-label="Zatvori kućicu za priče">×</button></div>
+        <section id="kutakPisanja" class="kutak-pisanja" aria-labelledby="naslovDodajPricu">
+          <section class="urednik-price" aria-labelledby="naslovDodajPricu">
+            <h3 id="naslovDodajPricu">Tvoj kutak za priče</h3>
+            <p>Prijavi se pa možeš dodati priču za čitatelje. Članovi nemaju međusobne poruke ni privatne kontakte.</p>
+            <p id="urednikPoruka" aria-live="polite">Za dodavanje priče prvo se prijavi.</p>
+            <p id="nacrtStatus" class="demo-napomena" aria-live="polite">Nacrt se može automatski spremiti na ovom uređaju uz dopuštenu lokalnu pohranu.</p>
+            <div id="nacrtiKontrole" class="nacrti-kontrole" hidden>
+              <button type="button" id="spremiNacrtGumb">Čuvaj nacrt</button>
+              <button type="button" id="nastaviPisatiGumb" aria-controls="nacrtiPriceSadrzaj" aria-expanded="false">Nastavi pisati</button>
+              <button type="button" id="novaPricaGumb">Nova priča</button>
+            </div>
+            <div id="nacrtiPriceSadrzaj" class="nacrti-sadrzaj" role="region" aria-labelledby="naslovNacrta" hidden>
+              <h4 id="naslovNacrta">Spremljene priče za nastavak</h4>
+              <div id="nacrtiPriceLista" aria-live="polite"></div>
+            </div>
+            <form id="obrazacNovePrice" class="urednik-obrazac" hidden>
+              <label for="novaPricaNaslov">Naslov priče</label><input id="novaPricaNaslov" required maxlength="100">
+              <label for="novaPricaTekst">Tekst priče</label><textarea id="novaPricaTekst" rows="8" required maxlength="12000"></textarea>
+              <button type="submit" id="objaviPricaGumb">Objavi priču</button>
+              <button type="button" id="ispisiNacrtPrice">Ispiši svoju priču s logom</button>
+            </form>
+            <div id="objavljenePrice" class="objavljene-price" aria-live="polite"></div>
+          </section>
+        </section>
+      </div>
+      </div>
+      <section id="prozorOgledala" class="igra-prozor skriveno ogledalo-prozor" role="region" tabindex="-1" aria-labelledby="naslovOgledala">
+        <div class="igra-prozor-zaglavlje"><h2 id="naslovOgledala">Kreativno ogledalo</h2><button type="button" id="zatvoriOgledalo" class="zatvori-prozor" aria-label="Zatvori ogledalo">×</button></div>
+        <p class="ogledalo-privatnost">Slika ostaje na uređaju; efekt se vidi odmah u pregledu.</p>
+        <div class="ogledalo-akcije">
+          <label class="ogledalo-ikona akcija" for="ogledaloDatoteka" title="Učitaj sliku" aria-label="Učitaj sliku">📁<input id="ogledaloDatoteka" type="file" accept="image/*"></label>
+          <button type="button" class="ogledalo-ikona akcija" id="ogledaloPokreniKameru" title="Uključi kameru" aria-label="Uključi kameru">📷</button>
+          <button type="button" class="ogledalo-ikona akcija" id="ogledaloSnimi" title="Snimi fotografiju" aria-label="Snimi fotografiju" disabled>📸</button>
+          <button type="button" class="ogledalo-ikona akcija" id="ogledaloUgasiKameru" title="Ugasi kameru" aria-label="Ugasi kameru" disabled>⏹️</button>
+          <button type="button" class="ogledalo-ikona akcija" id="ogledaloOcisti" title="Ukloni sliku" aria-label="Ukloni sliku">🗑️</button>
+          <button type="button" class="ogledalo-ikona akcija" id="ogledaloPreuzmi" title="Spremi sliku na uređaj" aria-label="Spremi sliku na uređaj">⬇️</button>
+        </div>
+        <video id="ogledaloVideo" playsinline muted hidden></video>
+        <canvas id="ogledaloPlatno" width="800" height="560" role="img" aria-label="Pregled uživo fotografije s odabranim efektom"></canvas>
+        <div class="ogledalo-vizualni-izbor efekti-ogledala" role="group" aria-label="Odaberi efekt fotografije">
+          <button type="button" class="ogledalo-ikona odabrana" data-ogledalo-control="ogledaloStil" data-value="comic" aria-label="Strip s konturama" title="Strip s konturama" aria-pressed="true">💥</button>
+          <button type="button" class="ogledalo-ikona" data-ogledalo-control="ogledaloStil" data-value="photo" aria-label="Izvorna fotografija" title="Izvorno">🌤️</button>
+          <button type="button" class="ogledalo-ikona" data-ogledalo-control="ogledaloStil" data-value="sketch" aria-label="Skica" title="Skica">✏️</button>
+          <button type="button" class="ogledalo-ikona" data-ogledalo-control="ogledaloStil" data-value="pixel" aria-label="Pikseli" title="Pikseli">🧊</button>
+          <button type="button" class="ogledalo-ikona" data-ogledalo-control="ogledaloStil" data-value="thermal" aria-label="Toplinska karta" title="Toplinska karta">🌡️</button>
+          <button type="button" class="ogledalo-ikona" data-ogledalo-control="ogledaloStil" data-value="night" aria-label="Zeleni noćni vid" title="Noćni vid">🌌</button>
+          <button type="button" class="ogledalo-ikona" data-ogledalo-control="ogledaloStil" data-value="sepia" aria-label="Sepija" title="Sepija">📸</button>
+          <button type="button" class="ogledalo-ikona" data-ogledalo-control="ogledaloStil" data-value="pop" aria-label="Pop-art" title="Pop-art">🟣</button>
+          <button type="button" class="ogledalo-ikona" data-ogledalo-control="ogledaloStil" data-value="neon" aria-label="Neon" title="Neon">⚡</button>
+          <button type="button" class="ogledalo-ikona" data-ogledalo-control="ogledaloStil" data-value="snow" aria-label="Padajući snijeg" title="Snijeg">❄️</button>
+          <button type="button" class="ogledalo-ikona" data-ogledalo-control="ogledaloStil" data-value="sparkles" aria-label="Zlatne šljokice" title="Šljokice">✨</button>
+          <button type="button" class="ogledalo-ikona" data-ogledalo-control="ogledaloStil" data-value="confetti" aria-label="Veseli konfeti" title="Konfeti">🎉</button>
+        </div>
+        <label class="sr-only" for="ogledaloStil">Odabrani efekt</label><select class="sr-only" id="ogledaloStil"><option value="comic">Strip s konturama</option><option value="photo">Izvorno</option><option value="sketch">Skica</option><option value="pixel">Pikseli</option><option value="thermal">Toplinska karta</option><option value="night">Zeleni noćni vid</option><option value="sepia">Sepija</option><option value="pop">Pop-art</option><option value="neon">Neon</option><option value="snow">Snijeg</option><option value="sparkles">Šljokice</option><option value="confetti">Konfeti</option></select>
+        <p id="ogledaloPoruka" role="status" aria-live="polite">Odaberi fotografiju ili otvori kameru. Slika ostaje na ovom uređaju.</p>
+      </section>
+
+    </section>
+
+    <section id="profil" class="odjeljak registracija" role="region" aria-labelledby="naslovRegistracije" hidden>
+      <div class="naslov-odjeljka">
+        <span aria-hidden="true">👋</span>
+        <div><h2 id="naslovRegistracije">Registracija</h2><p>Izradi profil za prijavu.</p></div>
+      </div>
+      <p class="demo-napomena" id="upozorenjeRegistracije"><strong>Pročitaj prije prijave:</strong> Ovo je ogledna stranica bez poslužitelja. Ako dopustiš lokalno spremanje, nadimak, e-adresa i tvoji radovi ostaju u pregledniku na ovom uređaju; autorica ih ne prima i drugi ih posjetitelji ne vide. Lozinka se ne sprema i ova prijava nije zaštićen korisnički račun — nemoj upisati lozinku koju koristiš drugdje. Ne upisuj puno ime, školu, adresu, telefon ni tuđe osobne podatke. Ako si dijete, zamoli roditelja ili skrbnika da ti pomogne.</p>
+      <form id="obrazacRegistracije" class="recenzija-obrazac" autocomplete="on" aria-label="Obrazac za registraciju">
+        <label for="imeRegistracija">Nadimak (bez prezimena)</label>
+        <input id="imeRegistracija" name="nickname" autocomplete="nickname" maxlength="24" required>
+        <label for="emailRegistracija">E-pošta roditelja ili skrbnika</label>
+        <input id="emailRegistracija" name="email" type="email" autocomplete="email" required>
+        <label for="lozinkaRegistracija">Lozinka, najmanje 8 znakova</label>
+        <div class="polje-lozinke"><input id="lozinkaRegistracija" name="new-password" type="password" autocomplete="new-password" minlength="8" required><button type="button" class="lozinka-toggle" data-lozinka-toggle="lozinkaRegistracija" aria-controls="lozinkaRegistracija" aria-pressed="false" aria-label="Prikaži lozinku"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path><circle cx="12" cy="12" r="3"></circle><path class="oko-crta" d="M3 3l18 18"></path></svg></button></div>
+        <label for="ponoviLozinku">Ponovi lozinku</label>
+        <div class="polje-lozinke"><input id="ponoviLozinku" name="confirm-password" type="password" autocomplete="new-password" minlength="8" required><button type="button" class="lozinka-toggle" data-lozinka-toggle="ponoviLozinku" aria-controls="ponoviLozinku" aria-pressed="false" aria-label="Prikaži lozinku"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path><circle cx="12" cy="12" r="3"></circle><path class="oko-crta" d="M3 3l18 18"></path></svg></button></div>
+        <label class="potvrda-pravila"><input type="checkbox" id="prihvatiPrivatnost" required> Pročitao/la sam <a href="#privatnost">pravila privatnosti</a>.</label>
+        <label class="potvrda-pravila"><input type="checkbox" id="prihvatiKolacice" required> Pročitao/la sam <a href="#kolacici">pravila o kolačićima i lokalnom spremanju</a>.</label>
+        <label class="potvrda-pravila"><input type="checkbox" id="roditeljskaSuglasnost" required> Ako sam maloljetan/na, roditelj ili skrbnik upoznat je s registracijom.</label>
+        <button type="submit">Izradi profil</button>
+        <div id="registracijaPoruka" role="status" aria-live="polite" aria-atomic="true"></div>
+      </form>
+      <p class="demo-napomena">Stranica ne sprema lozinku. Ako preglednik ponudi spremanje, njegov upravitelj lozinki može je zapamtiti na ovom računalu. Ovo je ogledna prijava; za stvarne račune potreban je zaštićen poslužitelj.</p>
+      <form id="obrazacPrijave" class="recenzija-obrazac prijava-obrazac" autocomplete="on" novalidate>
+        <h3>Prijava</h3><label for="emailPrijava">E-pošta profila</label><input id="emailPrijava" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required>
+        <label for="lozinkaPrijava">Lozinka</label><div class="polje-lozinke"><input id="lozinkaPrijava" name="password" type="password" autocomplete="current-password" required><button type="button" class="lozinka-toggle" data-lozinka-toggle="lozinkaPrijava" aria-controls="lozinkaPrijava" aria-pressed="false" aria-label="Prikaži lozinku"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path><circle cx="12" cy="12" r="3"></circle><path class="oko-crta" d="M3 3l18 18"></path></svg></button></div>
+        <button type="submit">Prijavi se</button><button type="button" id="odjavaGumb" hidden>Odjavi se</button><p id="profilPoruka" role="status" aria-live="polite" aria-atomic="true">Prijava je lokalni prikaz u ovom pregledniku.</p>
+      </form>
+    </section>
+
+    <section id="blog" class="odjeljak blog-prica">
+      <div class="naslov-odjeljka">
+        <span aria-hidden="true">📖</span>
+        <div><h2>Moje objave</h2><p><time datetime="2026-11-09">Objavljeno: 9. studenog 2026.</time></p></div>
+      </div>
+
+      <button type="button" id="otvoriUrednikBloga" hidden>Dodaj u moj blog</button>
+      <section id="urednikBloga" class="urednik-bloga" aria-labelledby="naslovUrednikaBloga" hidden>
+        <h3 id="naslovUrednikaBloga">Dodaj priču, pjesmu ili tekst</h3>
+        <p>Ovaj blog sprema tvoje objave u ovom pregledniku. Za javnu domenu trebat će povezati poslužitelj.</p>
+        <form id="obrazacBlogObjave" class="recenzija-obrazac">
+          <label for="blogVrsta">Vrsta objave</label><select id="blogVrsta"><option>Priča</option><option>Pjesma</option><option>Tekst o pjesmi</option></select>
+          <label for="blogNaslovObjave">Naslov</label><input id="blogNaslovObjave" maxlength="100" required>
+          <label for="blogTekstObjave">Tekst</label><textarea id="blogTekstObjave" rows="8" maxlength="30000" required></textarea>
+          <label for="blogSlikaDatoteka">Slika s ovog uređaja (neobavezno)</label><input id="blogSlikaDatoteka" type="file" accept="image/*">
+          <label for="blogOpisSlike">Opis slike za čitače zaslona</label><input id="blogOpisSlike" maxlength="180" placeholder="Opiši što se vidi na slici">
+          <button type="submit">Spremi objavu</button><button type="button" id="odustaniUredivanjeBloga" hidden>Odustani od uređivanja</button><p id="blogUrednikPoruka" aria-live="polite"></p>
+        </form>
+      </section>
+      <div id="mojeBlogObjave" class="moje-blog-objave" aria-live="polite"></div>
+
+      <div id="staraBlogObjava" class="moja-blog-objava">
+      <button type="button" id="otvoriBlogPricu" aria-controls="blogPricaSadrzaj" aria-expanded="false">Pročitaj više: Bijela maca</button>
+      <button type="button" id="obrisiStalnuBlogPricu" hidden>Obriši ovu priču</button>
+      <div id="blogPricaSadrzaj" class="blog-kviz-prozor" role="region" aria-labelledby="naslovBlogPrice" hidden>
+        <div class="blog-kviz-zaglavlje"><h3 id="naslovBlogPrice">Bijela maca</h3><button type="button" id="zatvoriBlogPricuGore" class="zatvori-prozor" aria-label="Zatvori priču">×</button></div>
+      <article class="tekst-price">
+        <p>Taj dan...veliki dan...mala bijela maca se igrala sa svojom sekom i mamom mačkom potpuno bezbrižno.
+        Odjedanput na dvorište stiže neki sivi auto, a male mace skočiše u skrovište, samo je mama maca hrabro ostala dočekati goste.
+      Iz auta izlazi djevojčica koja pogledom odmah traži gdje su se sakrile te male mace. Djevojčica pita mamu: "Je li mogu dobiti jednu malu macu?"
+    Majka joj odgovara: ¨Nema tu malih mačića. Tu smo došle samo pogledati auto koji se prodaje.¨ Dok su djevočićini roditelji gledali auto, ona pogledom traži mačiće i kad ih ne ugleda, rastuži se. Mačići ispod auta škicaju goste i ugledaju tugu na licu djevojčice. Bjeli mačić sa malo drugačijim okom kaže svojoj seki sa crnim točkama: "Ona ne izgleda opasno, možda da se malo prošetamo i razveselimo ju?" Drugi mačić se složi te oprezno i polako izađu iz skrovišta. A i sreća da jesu jer se lice djevojčice odmah ozarilo te vikne mami:"Vidi ih mama, dvije su! Daj molim te ja bi jednu macu. Daj vidi kako su bijele i pahuljste." Tad majka mačka odmah dođe do svojih mačića kao da ih želi zaštititi, a mačići razdragano nastave skakti oko djevojčice. Najedanput mala maca drugačijeg oka vikne seki sa točkicama: "Vidi me ja letim!" Drugi mačić mu kaže: "Ne letiš, kaj si blesava?! Uhvatila te mama te djevojčice."  Vlasnik auta sklapa dogovor za prodaju auta i kaže da može maca ići sa djevojčicom. Djevojčica i njezini roditelji se zahvale i krenu prema autu da odu doma sa samo jednim mačićem. Drugi mačić to vidi i počne biti tužan, skoro da se zaplače. Djevojčica to ugleda i okrene se k mami s pitanjem i velikim tužnim očima: "Mama! Pogledaj ju! Mogu li i nju uzeti da nebude sama?" Majka pogleda prema malim mačićima i onda prema svojoj kćeri i sa smiješkom kimne glavu jedanput. Djevojčica odmah podigne i drugog mačiča i sretno zagrli oba mala mačića. .....I tako dobile smo novi dom, a sa njim više nisam samo bijela maca nego se zovem Pers, a moja mačja seka Kiki.</p>
+      </article>
+      </div>
+
+      </div>
+    </section>
+
+    <section id="recenzije" class="odjeljak recenzije" hidden>
+      <div class="naslov-odjeljka"><span>⭐</span><div><h2>Recenzije</h2><p>Dodaj kratki dojam o stranici.</p></div></div>
+      <div id="popisRecenzija" class="recenzije-popis" aria-live="polite"></div>
+      <form id="obrazacRecenzije" class="recenzija-obrazac">
+        <label for="recenzijaIme">Nadimak (bez prezimena)</label>
+        <input id="recenzijaIme" name="ime" autocomplete="nickname" maxlength="24" required>
+        <label for="recenzijaOcjena">Ocjena</label>
+        <select id="recenzijaOcjena" name="ocjena" required>
+          <option value="5">5 — Odlično</option><option value="4">4 — Vrlo dobro</option><option value="3">3 — Dobro</option><option value="2">2 — Može bolje</option><option value="1">1 — Treba doraditi</option>
+        </select>
+        <label for="recenzijaTekst">Tvoja recenzija</label>
+        <textarea id="recenzijaTekst" name="recenzija" rows="4" required></textarea>
+        <button type="submit">Dodaj recenziju</button>
+        <p id="recenzijaPoruka" aria-live="polite"></p>
+      </form>
+      <p class="demo-napomena">Recenzije se spremaju samo u ovom pregledniku i nisu javne.</p>
+    </section>
+
+    <dialog id="blogCitaonica" class="blog-citaonica" lang="hr" aria-labelledby="blogCitaonicaNaslov">
+      <div class="blog-kviz-zaglavlje"><h2 id="blogCitaonicaNaslov"></h2><button type="button" id="zatvoriBlogCitaonicu" class="zatvori-prozor" aria-label="Zatvori čitaonicu">×</button></div>
+      <div id="blogCitaonicaSadrzaj" class="blog-citaonica-sadrzaj"></div>
+    </dialog>
+
+    <section id="printArea" class="ispisna-stranica" hidden aria-live="polite">
+      <div class="ispis-zaglavlje"><div class="okrugli-logo" role="img" aria-label="Okrugli logo Moj kutak"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="logoKrivuljaIspis" d="M 15 59 C 25 10, 75 10, 85 59"></path></defs><circle cx="50" cy="50" r="47" fill="white" stroke="goldenrod" stroke-width="3"></circle><text fill="midnightblue" font-size="9" font-weight="700" letter-spacing="1"><textPath href="#logoKrivuljaIspis" startOffset="50%" text-anchor="middle">MOJ KUTAK</textPath></text><path d="M50 39 C40 39 38 48 41 56 C43 62 47 65 50 67 C53 65 57 62 59 56 C62 48 60 39 50 39Z" fill="mediumorchid" stroke="darkmagenta" stroke-width="2"></path><path d="M50 67 L47 72 L53 72 Z M50 72 C47 78 55 79 50 86" fill="none" stroke="darkmagenta" stroke-width="2" stroke-linecap="round"></path><path d="M45 48 C48 43 53 43 56 48" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"></path></svg></div></div>
+      <h1 id="ispisNaslov" hidden></h1><img id="ispisSlika" alt="" hidden><p id="ispisOpisSlike"></p>
+      <p id="ispisTekst" class="ispis-tekst"></p><p id="ispisAutor" class="ispis-autor"></p>
+    </section>
+
+
+
+    <section id="kontakt" class="odjeljak kontakt-sekcija" hidden>
+      <div class="naslov-odjeljka"><span aria-hidden="true">💌</span><div><h2>Kontakt</h2><p>Javi se pitanjem, prijedlogom ili pričom.</p></div></div>
+      <p>E-pošta: <a href="mailto:ymaricay@hotmail.com">ymaricay@hotmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/385912345678" target="_blank" rel="noopener noreferrer">Pošalji poruku</a></p>
+      <p>Facebook: <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Otvori Facebook</a></p>
+      <form id="obrazacKontakta" class="recenzija-obrazac"><label for="kontaktIme">Ime</label><input id="kontaktIme" required><label for="kontaktEmail">Tvoja e-pošta</label><input id="kontaktEmail" type="email" required><label for="kontaktPoruka">Poruka</label><textarea id="kontaktPoruka" rows="5" required></textarea><button type="submit">Pripremi e-poštu</button><p id="kontaktStatus" aria-live="polite">Gumb otvara tvoju e-poštu s pripremljenom porukom.</p></form>
+    </section>
+
+    <section id="donacije" class="odjeljak donacije" hidden>
+      <div class="naslov-odjeljka"><span aria-hidden="true">💛</span><div><h2>Podrži stranicu</h2><p>Odaberi ponuđeni ili upiši vlastiti iznos.</p></div></div>
+      <label for="iznosPodrske">Iznos podrške</label><select id="iznosPodrske"><option value="5">5 €</option><option value="10">10 €</option><option value="20">20 €</option><option value="drugi">Upiši drugi iznos</option></select>
+      <div id="vlastitiIznosOkvir" hidden><label for="vlastitiIznosPodrske">Vlastiti iznos u eurima</label><input id="vlastitiIznosPodrske" type="number" min="0.01" max="10000" step="0.01" inputmode="decimal" placeholder="Na primjer: 7,50"><p id="donacijaIznosPoruka" aria-live="polite"></p></div>
+      <p id="donacijaIznosPrikaz" class="ukupno">Odabrani iznos: 5,00 €</p>
+      <section id="donacijaPodaciZaUplatu" class="bankovna-uplata"><h3>Bankovna uplata</h3><div id="podaciUplatePodrska"></div><p>Uplati samo prema podacima i barkodu koje je autorica unijela. Barkod/QR kod treba preuzeti od banke i provjeriti; iznos na barkodu mora odgovarati odabranom iznosu podrške.</p></section>
+      <button type="button" id="otvoriPostavkeUplate" hidden>Unesi ili promijeni bankovne podatke i barkod</button>
+      <form id="obrazacPostavkeUplate" class="recenzija-obrazac postavke-uplate" hidden>
+        <h3>Podaci za uplatu na stranici</h3><p>Unesi svoj IBAN i učitaj gotovu sliku barkoda/QR koda iz banke. Stranica ga ne može sama potvrditi ni izraditi.</p>
+        <label for="ibanUplate">IBAN</label><input id="ibanUplate" maxlength="34" autocomplete="off" placeholder="HR…" required>
+        <label for="barkodDatoteka">Slika valjanog barkoda/QR koda iz banke (neobavezno)</label><input id="barkodDatoteka" type="file" accept="image/*">
+        <label for="barkodOpis">Opis slike za čitač zaslona</label><input id="barkodOpis" maxlength="180" placeholder="Barkod za bankovnu uplatu">
+        <button type="submit">Spremi podatke za ovu demonstraciju</button><p id="postavkeUplatePoruka" aria-live="polite"></p>
+      </form>
+      <p class="demo-napomena">Ovo je ogledni prikaz: uplata se ne provjerava ni obrađuje. Za košaricu barkod mora odgovarati točnom iznosu narudžbe.</p>
+    </section>
+
+    <section id="roditelj" class="odjeljak napredak-roditelj" hidden>
+      <div class="naslov-odjeljka"><span aria-hidden="true">🌱</span><div><h2>Vrijeme na stranici</h2><p>Pregled vremena i korištenih igara za roditelja i dijete.</p></div></div>
+      <p>Ovdje se vidi koliko je stranica korištena, koje su igre otvorene, koliko puta i koliko je vremena provedeno u svakoj. Podaci ostaju na ovom uređaju samo ako roditelj uključi spremanje.</p>
+      <label class="potvrda-pravila"><input type="checkbox" id="spremiNapredak"> Roditelj dopušta spremanje napretka na ovom uređaju.</label>
+      <div class="napredak-kartice"><p>Ova posjeta <strong id="vrijemePosjete">0 min</strong></p><p>Ukupno zabilježeno <strong id="vrijemeUkupno">0 min</strong></p><p>Pokrenute igre <strong id="brojPokrenutihIgara">0</strong></p></div>
+      <h3>Korištenje igara</h3><div id="pregledIgara" aria-live="polite"><p>Još nema zabilježenih igara.</p></div>
+      <p id="podsjetnikPauza" aria-live="polite"></p><button type="button" id="obrisiNapredak">Obriši spremljeni napredak</button><p id="napredakPoruka" aria-live="polite"></p>
+    </section>
+
+    <section id="privatnost" class="odjeljak pravila" hidden>
+      <div class="naslov-odjeljka"><span aria-hidden="true">🔒</span><div><h2>Pravila privatnosti</h2><p>Jasne informacije o podacima na ovoj stranici.</p></div></div>
+      <p><strong>Ova obavijest opisuje oglednu verziju koja je trenutačno otvorena.</strong> Ona nije pravno jamstvo ni zamjena za provjeru stvarne domene i hostinga.</p>
+      <h3>Tko upravlja stranicom?</h3><p>Autorica i kontakt za privatnost: Marica Barušić, <a href="mailto:ymaricay@hotmail.com">ymaricay@hotmail.com</a>. Ova kontaktna adresa može se promijeniti prije objave domene.</p>
+      <h3>Što se događa s profilom i radovima?</h3><p>Ova verzija nema povezanu bazu podataka ni poslužitelj za korisničke račune. Kad posjetitelj dopusti lokalno spremanje, nadimak, e-adresa, nacrti, priče, crteži/slike, recenzije, dnevnik, raspored, kalendar i napredak spremaju se u lokalnu pohranu njegova preglednika. Autorica ih ne prima tim spremanjem, ne može ih pregledavati na svom uređaju, a drugi posjetitelji ih ne vide. Lozinka se ne sprema. Objavljivanje rada u ovoj verziji znači da se prikazuje samo u istom pregledniku; javna objava svima nije povezana.</p>
+      <h3>Poruke i vanjske poveznice</h3><p>Obrazac za kontakt otvara program za e-poštu na uređaju. Ako pošiljatelj sam pošalje poruku, ona stiže autorici i obrađuje se kroz njezin račun e-pošte. Djeca trebaju zamoliti roditelja ili skrbnika da pošalje poruku. Poveznice na YouTube, CARNET i društvene mreže vode izvan ove stranice; njihovi pružatelji obrađuju podatke prema svojim pravilima tek kada se poveznica otvori.</p>
+      <h3>Rok čuvanja i brisanje</h3><p>Podaci lokalno spremljeni u pregledniku ostaju ondje dok ih korisnik ne obriše ili dok ih preglednik ne ukloni. Za brisanje otvori postavke preglednika, pronađi podatke ove stranice i izbriši ih. Autorica ne može daljinski obrisati podatke iz tuđeg preglednika. Poruke poslane e-poštom ostaju u poštanskim sandučićima dok ih njihovi korisnici ne izbrišu.</p>
+      <h3>Prava i kontakt</h3><p>Za pitanja, zahtjev za pristup, ispravak ili brisanje podataka koje si poslao/la autorici, javi se na <a href="mailto:ymaricay@hotmail.com">ymaricay@hotmail.com</a>. Za podatke koji su samo u tvom pregledniku koristi postavke tog preglednika. Možeš se obratiti i <a href="https://azop.hr/" target="_blank" rel="noopener noreferrer">Agenciji za zaštitu osobnih podataka (AZOP)</a>.</p>
+      <p><strong>Prije javne domene:</strong> treba dopuniti podatke o odabranom hostingu, njegovim zapisima posjeta i svim uslugama koje budu uključene. Ako se uključi javno objavljivanje dječjih radova, naplata ili pohrana računa, način rada i ova obavijest moraju se ponovno procijeniti prije objave.</p>
+    </section>
+
+    <section id="kolacici" class="odjeljak pravila" hidden>
+      <div class="naslov-odjeljka"><span aria-hidden="true">🍪</span><div><h2>Pravila o kolačićima i lokalnom spremanju</h2><p>Što preglednik sprema i kako to promijeniti.</p></div></div>
+      <p><strong>Kolačići:</strong> trenutačni kod stranice ne postavlja reklamne ili analitičke kolačiće i ne ugrađuje YouTube video. Poveznice prema drugim uslugama otvaraju se tek kada ih korisnik odabere. Hosting koji će se odabrati za javnu domenu može imati vlastite tehničke kolačiće ili zapise; to se mora provjeriti kod pružatelja hostinga.</p>
+      <p><strong>Lokalna pohrana:</strong> nije kolačić, nego spremanje podataka u pregledniku na uređaju posjetitelja. Nakon odabira „Dopusti” stranica ondje može spremiti nadimak, e-adresa profila, nacrte, priče, slike/crteže, recenzije, dnevnik, raspored, kalendar, napredak, odabrani vodeni žig u dnevniku i postavke ogledne trgovine. Autorica te podatke ne prima. Izbor pohrane pamti se u istom pregledniku; spremljeni sadržaj ostaje dok ga korisnik ne izbriše.</p>
+      <p>Odaberi „Odbij” ako ne želiš spremanje. Promjena izbora zaustavlja buduće lokalno spremanje, ali ne briše ranije spremljene podatke. Njih možeš izbrisati u postavkama preglednika pod podacima stranice. Ne spremaj na ovoj stranici pravu lozinku, adresu, telefon, podatke kartice ni puno ime djeteta.</p>
+      <p>Ova obavijest vrijedi za trenutačni ogledni kod. Prije domene treba provjeriti stvarne kolačiće i druge tehnologije koje koristi hosting te ažurirati popis, svrhe, rokove i mogućnosti izbora.</p>
+      <button type="button" id="promijeniPostavkePohrane">Promijeni izbor lokalne pohrane</button>
+    </section>
+  </main>
+  <button type="button" id="naVrhGumb" class="na-vrh" aria-label="Vrati se na početak stranice" title="Na vrh" hidden>↑ Na vrh</button>
+
+  <footer>
+    <button type="button" id="footerToggle" class="footer-toggle" aria-controls="footerSadrzaj" aria-expanded="false" aria-label="Otvori podnožje"><span aria-hidden="true">⌄</span></button>
+    <div id="footerSadrzaj" hidden>
+    <div class="footer-gornji">
+      <nav class="footer-informacije" aria-label="Informacije o stranici">
+        <a href="#o-stranici">HTML, CSS i JavaScript</a>
+        <span aria-hidden="true">🌈</span>
+        <a href="#autor">O autoru</a>
+        <span aria-hidden="true">🌈</span>
+        <a href="#donacije">Podrži</a>
+        <span aria-hidden="true">🌈</span>
+        <a href="#igre">Trgovina</a>
+        <span aria-hidden="true">🌈</span>
+        <a href="#recenzije">Recenzije</a>
+        <span aria-hidden="true">🌈</span>
+        <a href="#roditelj">Vrijeme na stranici</a>
+      </nav>
+      <div class="footer-roditelj"><button type="button" id="installPrompt">📲 Kako dodati na početni zaslon</button></div>
+    </div>
+    <div class="footer-donji">
+      <nav class="kontakt" aria-label="Kontakt i društvene mreže">
+      <a href="#kontakt">Kontakt:</a>
+      <a href="mailto:ymaricay@hotmail.com">✉️ E-pošta</a>
+      <a href="https://wa.me/385912345678" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+      </nav>
+      <nav class="footer-pravila" aria-label="Privatnost i kolačići">
+        <a href="#privatnost">Privatnost</a>
+        <a href="#kolacici">🍪 Pravila o kolačićima</a>
+      </nav>
+    </div>
+    <p class="footer-autorsko-pravo">© 2026 M. B. · Autorsko pravo za moje tekstove i dizajn stranice.</p>
+    </div>
+  </footer>
+
+  <aside id="obavijestPohrane" class="obavijest-pohrane" aria-labelledby="naslovPohrane" hidden>
+    <div><h2 id="naslovPohrane">Postavke privatnosti</h2><p>Možeš dopustiti spremanje profila, prijave, nacrta i blog objava sa slikama, podataka za uplatu, recenzija i napretka u ovom pregledniku ili odbiti dodatno spremanje.</p><a href="#kolacici">Pročitaj pravila o kolačićima i lokalnom spremanju</a></div>
+    <div class="pohrana-gumbi"><button type="button" id="dopustiPohranu">Dopusti lokalno spremanje</button><button type="button" id="odbijPohranu">Odbij dodatno spremanje</button></div>
+  </aside>
+
+</body>
+</html>
+
+
+
+
